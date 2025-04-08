@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Chat App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Login Form -->
+  <div id="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input id="name-input" placeholder="Enter your name" required />
+      <input id="phone-input" placeholder="Enter your phone number" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Chat App -->
+  <div id="app-container" style="display: none;">
+    <!-- Left Sidebar: Contacts -->
+    <div id="contacts-container">
+      <h2>Contacts</h2>
+      <ul id="contacts-list">
+        <!-- Contacts will be dynamically added here -->
+      </ul>
+      <form id="add-contact-form">
+        <input id="contact-name-input" placeholder="Contact Name" required />
+        <input id="contact-phone-input" placeholder="Phone Number" required />
+        <button type="submit">Add Contact</button>
+      </form>
+    </div>
+
+    <!-- Right Sidebar: Chatbox -->
+    <div id="chat-container">
+      <h2 id="chat-header">Chat</h2>
+      <ul id="messages">
+        <!-- Messages will be dynamically added here -->
+      </ul>
+      <form id="chat-form">
+        <input id="message-input" autocomplete="off" placeholder="Type a message..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/client.js"></script>
+</body>
+</html>

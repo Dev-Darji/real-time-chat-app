@@ -1,0 +1,228 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9ecef; /* Light gray background for the app */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login container */
+#login-container {
+  max-width: 400px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#login-container h2 {
+  margin-bottom: 20px;
+}
+
+#login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#login-container button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#login-container button:hover {
+  background: #0056b3;
+}
+
+/* App container: Two-column layout */
+#app-container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Left Sidebar: Contacts */
+#contacts-container {
+  width: 30%;
+  background: #f8f9fa; /* Light gray background */
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#contacts-container h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+#contacts-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contacts-list li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contacts-list li:hover {
+  background: #007bff;
+  color: #ffffff;
+}
+
+/* Add Contact Form */
+#add-contact-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#add-contact-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#add-contact-form button {
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#add-contact-form button:hover {
+  background: #0056b3;
+}
+
+/* Right Sidebar: Chatbox */
+#chat-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#chat-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #007bff;
+}
+
+#messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.message.incoming {
+  background-color: #e9ecef;
+  color: #000000;
+  align-self: flex-start;
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 15px 15px 15px 0;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message.outgoing {
+  background-color: #007bff;
+  color: #ffffff;
+  align-self: flex-end;
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 15px 15px 0 15px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#chat-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+#message-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#chat-form button {
+  padding: 12px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#chat-form button:hover {
+  background: #0056b3;
+}
+
+/* Scrollbar styling */
+#contacts-container::-webkit-scrollbar,
+#messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+#contacts-container::-webkit-scrollbar-thumb,
+#messages::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+#contacts-container::-webkit-scrollbar-track,
+#messages::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
