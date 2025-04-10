@@ -9,6 +9,7 @@
     "build": "tsc"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "socket.io": "^4.8.1"
   },
@@ -23,5 +24,13 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "type": "commonjs"
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-Darji/real-time-chat-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dev-Darji/real-time-chat-app/issues"
+  },
+  "homepage": "https://github.com/Dev-Darji/real-time-chat-app#readme"
 }

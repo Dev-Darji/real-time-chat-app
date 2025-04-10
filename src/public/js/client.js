@@ -113,9 +113,15 @@ chatForm.addEventListener("submit", (e) => {
 
 // Handle receiving messages
 socket.on("receive_message", (data) => {
-  if (data.sender === currentReceiverPhone) {
+  const { sender, message } = data;
+
+  // Find the sender's name from the contacts list
+  const contact = contacts.find((contact) => contact.phone === sender);
+  const senderName = contact ? contact.name : sender; // Fallback to phone number if name is not found
+
+  if (sender === currentReceiverPhone) {
     const item = document.createElement("li");
-    item.textContent = `${data.sender}: ${data.message}`;
+    item.textContent = `${senderName}: ${message}`;
     item.classList.add("message", "incoming");
     messages.appendChild(item);
   }
